@@ -1,16 +1,29 @@
+Publications
+------------------------------------------------------------------------
 
-========================================================================
+If you use this benchmark in your research, please cite our [FPGA'17
+paper][4]:
+
+```
+  @inproceedings{lockhart-pymtl-micro2014,
+    title     = {Accelerating Face Detection on Programmable SoC Using
+                 C-Based Synthesis},
+    author    = {Nitish Srivastava and Steve Dai and Rajit Manohar and
+	         Zhiru Zhang},
+    booktitle = {25\textsuperscript{th} ACM/SIGDA International
+		 Symposium on Field-Programmable Gate Arrays},
+    month     = {Feb},
+    year      = {2017},
+    doi       = {10.1145/3020078.3021753},
+  }
+```
+
+ [4]: http://dx.doi.org/10.1145/3020078.3021753
 
 
 facedetect-fpga is an open-source implementation of Viola-Jones face
 detection algorithm suitable for C-based synthesis.  It was introduced
-at FPGA-25 in February, 2017. This research was supported by the
-National Science Foundation grants under [Award #1065307][1], [Award
-#1337240][2], [Award #1453378][3], and a research gift from Xilinx, Inc.
-
- [1]: http://www.nsf.gov/awardsearch/showAward?AWD_ID=1065307
- [2]: http://www.nsf.gov/awardsearch/showAward?AWD_ID=1337240
- [3]: http://www.nsf.gov/awardsearch/showAward?AWD_ID=1453378
+at FPGA-25 in February, 2017.
 
 Tutorial
 ------------------------------------------------------------------------
@@ -113,14 +126,12 @@ Make sure the C-simulation is working and producing the right results.
 Generate the bitstream and run it on the FPGA.
 
 
-### Effects of various types of Optimizations
+### Stages of Optimizations
 
 The source code for different stages of optimizations mentioned in our
 paper is also added to the repository so that users can get a feel of
-the effects of each and every optimzation. There are 4 extra folders
+the effects of each and every optimzation. There are 3 extra folders
 which are added to the repo:
-
-CPUperf : This folder has the original C++ software implementation.
 
 Baseline : This folder has the baseline implementation which replaces
 all the non synthesizable constructs.
@@ -146,24 +157,4 @@ be found here:
  - http://opensource.org/licenses/BSD-3-Clause
 
 
-Publications
-------------------------------------------------------------------------
 
-If you use this benchmark in your research, please cite our [FPGA'17
-paper][4]:
-
-```
-  @inproceedings{lockhart-pymtl-micro2014,
-    title     = {Accelerating Face Detection on Programmable SoC Using
-                 C-Based Synthesis},
-    author    = {Nitish Srivastava and Steve Dai and Rajit Manohar and
-	         Zhiru Zhang},
-    booktitle = {25\textsuperscript{th} ACM/SIGDA International
-		 Symposium on Field-Programmable Gate Arrays},
-    month     = {Feb},
-    year      = {2017},
-    doi       = {10.1145/3020078.3021753},
-  }
-```
-
- [4]: http://dx.doi.org/10.1145/3020078.3021753
