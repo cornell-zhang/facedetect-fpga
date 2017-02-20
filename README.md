@@ -5,7 +5,7 @@ If you use this benchmark in your research, please cite our [FPGA'17
 paper][4]:
 
 ```
-  @inproceedings{lockhart-pymtl-micro2014,
+  @inproceedings{srivastava-facedetect-micro2017,
     title     = {Accelerating Face Detection on Programmable SoC Using
                  C-Based Synthesis},
     author    = {Nitish Srivastava and Steve Dai and Rajit Manohar and
