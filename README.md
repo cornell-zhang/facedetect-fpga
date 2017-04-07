@@ -22,8 +22,19 @@ paper][4]:
 
 
 facedetect-fpga is an open-source implementation of Viola-Jones face
-detection algorithm suitable for C-based synthesis.  It was introduced
-at FPGA-25 in February, 2017.
+detection algorithm suitable for C-based synthesis. It was introduced 
+at FPGA-25 in February, 2017. 
+
+This design explores the flow from software based implementation to 
+an optimized C/C++ design suitable for High Level Synthesis (HLS) flow.
+The face detection system is optimized for performance at the
+C/C++ level and is synthesizable with a full-system compiler 
+SDSoC from Xilinx. The design is suitable for real-time face detection 
+applications and achieves a frame rate of 30 fps. The design has been 
+tested using Vivado HLS 2016 and SDSoC 2016 on ZC-706 board with
+Xilinx Zynq-7000 XC7Z045 FPGA and ARM Cortex-A9 CPU. The generated 
+RTL code (SystemC, VHDL and Verilog) from the HLS compilers can 
+potentially be used for other purposes as well. 
 
 Tutorial
 ------------------------------------------------------------------------
