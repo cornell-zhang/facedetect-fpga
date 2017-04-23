@@ -89,6 +89,9 @@ in the following directory:
 
     _sds/reports
 
+For reference I have uploaded these two folders from my own compilation 
+here: http://people.ece.cornell.edu/nks45/face-detect-compiled/
+
 ### Porting Face-detection accelerator onto the FPGA
 
 To port the face-detection accelerator onto the FPGA copy all the files
@@ -155,6 +158,10 @@ in the first 3 stages are in parallel and the ones in  the other 22
 stages are in pipeline.
 
 The main folder has the code which combines all these optimizations.
+
+### Resource Usage
+
+The resource usage at each stage of optimization is given below:
 
 
 License
