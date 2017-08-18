@@ -20,6 +20,8 @@ paper][4]:
 
  [4]: http://dx.doi.org/10.1145/3020078.3021753
 
+**NOTE: If you face any issues while running anything in this repo, 
+shoot me an email at nks45@cornell.edu**
 
 facedetect-fpga is an open-source implementation of Viola-Jones face
 detection algorithm suitable for C-based synthesis. It was introduced 
@@ -121,13 +123,14 @@ function in gen\_dataset/gen\_image.cpp and compile and run it:
     % cd gen_dataset
     % cp /path/to/image/test-image.pgm  .
 
-    Edit main() function in gen_image.cpp/
+    Compile the code
+    % g++ gen_image.cpp -o gen_image
+    % ./gen_image test-image.pgm test-image.h
 
-    % g++ gen_image.cpp
-    % ./a.out
 
 This will produce the .h file for the image with the image pixels in the
-hex format. Copy this .h file to the main directory:
+hex format. Note that the original pgm image must be 320 X 240 pixels. 
+Copy this .h file to the main directory:
 
     % cp test-image.h ../.
 

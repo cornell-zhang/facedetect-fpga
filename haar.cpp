@@ -2859,7 +2859,7 @@ void detectFaces
   winSize0.width = 24;
   winSize0.height= 24;
 
-  factor = scaleFactor;
+  factor = 1;
 
   int height, width;
 
