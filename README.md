@@ -40,6 +40,10 @@ potentially be used for other purposes as well.
 
 Tutorial
 ------------------------------------------------------------------------
+### Pre-requisites
+
+You will need to install Vivado-HLS and SDSoC to compile and run this
+project.
 
 ### C-simulation
 
