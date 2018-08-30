@@ -9,6 +9,22 @@
 // Memory BANKING
 //=====================================================
 
+/*
+Banking technique:
+
+Pipelining the loop annotated as "Stages"  requires reading 12 values from the integral image 
+window simultaneously. As integral image is 25 x 25, 12 muxes each 625 x 1 will be 
+required. This adds a lot of area overhead. A smart banking can avoid this. The banking technique 
+works like this --  We create a graph with 625 nodes corresponding to each position in the integral 
+image window. There are no edges in the graph yet. Now, we iterate through all the 2913 classifiers. 
+For each classifier we need to read 12 positions from integral image window in same cycle and hence 
+these 12 positions should lie in different banks. Hence, we add edges between the nodes corresponding 
+to these 12 positions. We do this for all the 2913 classifiers. Once the graph is formed, we need 
+to solve the graph coloroing problem, i.e. find minimum number of colors required to color this graph 
+so that no two nodes connected by an edge get the same color. There are many online tools that can be 
+used to do so. One can also formulate graph coloring problem is ILP and use SAT solvers. 
+*/
+
 #include "haar_mapping.h"
 
 inline uint5_t get_bank( uint10_t addr )
